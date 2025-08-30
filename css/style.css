@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f6fa;
+}
+
+.banner-popup {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(60,60,60,0.15);
+    padding: 2rem 3rem 1.5rem 2.5rem;
+    min-width: 320px;
+    text-align: center;
+    z-index: 1000;
+    animation: popupIn 0.5s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes popupIn {
+    0% { transform: translateX(-50%) scale(0.8) translateY(40px); opacity: 0; }
+    100% { transform: translateX(-50%) scale(1) translateY(0); opacity: 1; }
+}
+
+.banner-popup h2 {
+    margin-top: 0;
+    color: #e17055;
+}
+
+.banner-popup p {
+    color: #636e72;
+    font-size: 1.1rem;
+}
+
+.countdown {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0984e3;
+    letter-spacing: 2px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: #ff7675;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.close-btn:hover {
+    background: #d63031;
+    transform: scale(1.1) rotate(10deg);
+}
